@@ -1,7 +1,8 @@
-#include <stdint.h>
+// #include <stdint.h>
 #include <zephyr/device.h>
 #include <zephyr/kernel.h>
-#include <zephyr/drivers/display.h>
+// #include <zephyr/drivers/display.h>
+#include <zephyr/display/cfb.h>
 #include <zephyr/logging/log.h>
 
 #include "logo_image.h"
@@ -23,6 +24,16 @@ void main(void)
     LOG_ERR("display device is not ready");
     return;
   }
+
+  // int ret = cfb_framebuffer_init(display);
+
+  // if (ret != 0)
+  // {
+  //   LOG_ERR("Could not initialise display");
+  //   return;
+  // }
+  
+  // ret = cfb_print(display, "hello world!")
 
   struct display_capabilities capabilities;
   display_get_capabilities(display, &capabilities);
@@ -53,17 +64,17 @@ void main(void)
   }
   size_t ms_sleep = 5;
 
-  while (true) {
-    // Increase brightness
-    for (size_t i = 0; i < 255; i++) {
-      display_set_contrast(display, i);
-      k_sleep(K_MSEC(ms_sleep));
-    }
+  // while (true) {
+  //   // Increase brightness
+  //   for (size_t i = 0; i < 255; i++) {
+  //     display_set_contrast(display, i);
+  //     k_sleep(K_MSEC(ms_sleep));
+  //   }
 
-    // Decrease brightness
-    for (size_t i = 255; i > 0; i--) {
-      display_set_contrast(display, i);
-      k_sleep(K_MSEC(ms_sleep));
-    }
-  }
+  //   // Decrease brightness
+  //   for (size_t i = 255; i > 0; i--) {
+  //     display_set_contrast(display, i);
+  //     k_sleep(K_MSEC(ms_sleep));
+  //   }
+  // }
 }
