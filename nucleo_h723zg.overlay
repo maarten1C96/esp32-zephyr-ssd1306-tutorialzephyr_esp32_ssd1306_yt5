@@ -13,3 +13,9 @@
 	       segment-remap;
       };
 };
+
+/ {
+    aliases {
+        i2c0 = &i2c1;
+    };
+};
