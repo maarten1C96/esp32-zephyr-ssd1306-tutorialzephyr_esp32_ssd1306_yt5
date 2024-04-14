@@ -35,8 +35,11 @@ void main(void)
   }
 
   char display_buffer[128];
+  ret = cfb_print(display, "compiled at:", 0, 0);
+  snprintf(display_buffer, sizeof(display_buffer), "%s", COMPILE_DATE);
+  ret = cfb_print(display, display_buffer, 0, 20);
   snprintf(display_buffer, sizeof(display_buffer), "%s", COMPILE_TIME);
-  ret = cfb_print(display, display_buffer, 0, 0);
+  ret = cfb_print(display, display_buffer, 0, 40);
   if (ret != 0)
   {
     LOG_ERR("Could not print to display");
