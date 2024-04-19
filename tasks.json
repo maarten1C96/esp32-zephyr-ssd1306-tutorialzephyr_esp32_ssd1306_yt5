@@ -1,0 +1,19 @@
+// {
+//   "version": "2.0.0",
+//   "tasks": [
+//     {
+//       "label": "Activate Conda Environment",
+//       "type": "shell",
+//       // "command": "conda activate zephyr && echo 'Activated zephyr environment'",
+//       // "command": "fish -c 'conda activate zephyr && source ~/zephyrproject/zephyr-venv/bin/activate.fish'",
+//       "command": "fish -c 'conda activate zephyr && source ~/zephyrproject/zephyr-venv/bin/activate.fish' && export BOARD=nucleo_h723zg && cmake -DBOARD=nrf52840dk_nrf52840 && source /Users/maartenscherpenisse/miniconda3/bin/activate.fish zephyr-env",
+//       "problemMatcher": [],
+//       "options": {
+//         "env": {
+//           "CONDA_EXE": "/Users/maartenscherpenisse/miniconda3/bin/conda",
+//           "PATH": "${env:PATH}:/Users/maartenscherpenisse/miniconda3/bin"
+//         }
+//       }
+//     }
+//   ]
+// }
