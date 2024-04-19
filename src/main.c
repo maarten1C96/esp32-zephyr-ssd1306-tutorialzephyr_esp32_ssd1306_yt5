@@ -6,8 +6,6 @@
 #include <zephyr/display/cfb.h>
 #include <zephyr/logging/log.h>
 
-// #include "logo_image.h"
-
 #define DISPLAY_BUFFER_PITCH 128
 
 LOG_MODULE_REGISTER(display_1);
@@ -52,3 +50,4 @@ void main(void)
     LOG_ERR("Could not finalise to display_1");
     return;
   }
+}
