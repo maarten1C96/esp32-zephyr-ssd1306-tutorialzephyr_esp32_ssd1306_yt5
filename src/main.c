@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <zephyr/device.h>
 #include <zephyr/kernel.h>
-// #include <zephyr/drivers/display_i2c.h>
+// #include <zephyr/drivers/display.h>
 #include <zephyr/display/cfb.h>
 #include <zephyr/logging/log.h>
 
