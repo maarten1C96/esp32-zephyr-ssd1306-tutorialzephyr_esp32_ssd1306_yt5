@@ -1,0 +1,28 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 29,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "nucleo-h723zg",
+      "description": "Use for STM32 Nucleo H723ZG board",
+      "generator": "Ninja",
+      "hidden": false,
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "BOARD": "nucleo_h723zg",
+        "PYTHON_EXECUTABLE": "/Users/maartenscherpenisse/zephyrproject/zephyr-venv/bin/python3"
+      },
+      "environment": {
+        "ZEPHYR_TOOLCHAIN_VARIANT": "gnuarmemb",
+        "GNUARMEMB_TOOLCHAIN_PATH": "/Applications/ARM",
+        "ZEPHYR_BASE": "/Users/maartenscherpenisse/zephyrproject/zephyr",
+        "CONDA_PREFIX": "/Users/maartenscherpenisse/miniconda3/envs/zephyr-env",
+        "PATH": "/Users/maartenscherpenisse/miniconda3/envs/zephyr-env/bin:${env:PATH}"
+      }
+    }
+  ]
+}
